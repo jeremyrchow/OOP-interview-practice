@@ -24,11 +24,6 @@ BIG
 ```
 # ADD GUESTS
 ```
-Size.SMALL False
-Size.SMALL False
-Size.SMALL False
-Size.SMALL False
-2 False
 Hotel 1
 SMALL
         vacant :
@@ -49,7 +44,9 @@ BIG
                 Room 8, BIG, occupant: (None)
         occupied :
                 Room 9, BIG, occupant: (gerald_7, size SMALL)
+```
 # GUESTS ROSTER:
+```
 gerald_0 : Room 3, SMALL, occupant: (gerald_0, size SMALL)
 gerald_1 : Room 2, SMALL, occupant: (gerald_1, size SMALL)
 gerald_2 : Room 1, SMALL, occupant: (gerald_2, size SMALL)
