@@ -1,5 +1,6 @@
 # Initialize
 # ADDED ROOMS TO HOTEL
+```
 Hotel 1
 SMALL
         vacant :
@@ -20,7 +21,9 @@ BIG
                 Room 8, BIG, occupant: (None)
                 Room 9, BIG, occupant: (None)
         occupied :
+```
 # ADD GUESTS
+```
 Size.SMALL False
 Size.SMALL False
 Size.SMALL False
@@ -55,7 +58,9 @@ gerald_4 : Room 6, MEDIUM, occupant: (gerald_4, size SMALL)
 gerald_5 : Room 5, MEDIUM, occupant: (gerald_5, size SMALL)
 gerald_6 : Room 4, MEDIUM, occupant: (gerald_6, size SMALL)
 gerald_7 : Room 9, BIG, occupant: (gerald_7, size SMALL)
+```
 # CHECKOUT:
+```
 Hotel 1
 SMALL
         vacant :
@@ -76,7 +81,9 @@ BIG
                 Room 8, BIG, occupant: (None)
         occupied :
                 Room 9, BIG, occupant: (gerald_7, size SMALL)
+```
 # CHECK IN LARGER GUEST:
+```
 Hotel 1
 SMALL
         vacant :
@@ -97,3 +104,4 @@ BIG
         occupied :
                 Room 9, BIG, occupant: (gerald_7, size SMALL)
                 Room 8, BIG, occupant: (BIGLY, size BIG)
+```
