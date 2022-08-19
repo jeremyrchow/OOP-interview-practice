@@ -68,7 +68,6 @@ class Hotel:
     def check_in(self,guest):
         size = guest.size
         while size <= max(Size):
-            print("CHECKING SIZE", size, max(Size))
             if not self._is_vacant(size):
                 print(size,self._is_vacant(size))
                 size +=1
@@ -76,11 +75,9 @@ class Hotel:
                 room_id,room = self.rooms[size]["vacant"].popitem()
                 
                 room.set_occupant(guest)
-                print("SETTING OCCUPANT FOR ",room)
                 self.rooms[size]["occupied"][room_id]=room
 
                 self.guests[guest.name] = room
-                print(f"ADDED {guest.name} to {room_id}")
                 return room_id
         raise ValueError(f"No vacancy for {Size(guest.size).name}")
 
@@ -110,24 +107,32 @@ class Puppy:
         return f"{self.name}, size {Size(self._size).name}"
 
 if __name__ == "__main__":
-    
+    print("# Initialize")
     hotel = Hotel(1)
     
     size = Size.SMALL
     for i in range(10):
-
         hotel.add_room(i,size)
         if i >0 and i%3 == 0 and size < max(Size):
             size +=1
+    print("# ADDED ROOMS TO HOTEL")
     print(hotel)
-    puppy = Puppy(Size.SMALL,"BOB")
+
+    print("# ADD GUESTS")
     for i in range(8):
         hotel.check_in(Puppy(Size.SMALL,f"gerald_{i}"))
-        
-        print(i)
+
     print(hotel)
-    print(hotel.guests)
+    print("# GUESTS ROSTER:")
+    for id,guest in hotel.guests.items():
+        print(id,":", guest)
+
+        
+    print("# CHECKOUT:")
     hotel.check_out("gerald_0")
     print(hotel)
+
+    
+    print("# CHECK IN LARGER GUEST:")
     hotel.check_in(Puppy(Size.BIG,f"BIGLY"))
     print(hotel)
